@@ -3,6 +3,24 @@
 Converts from 2.01 to 1.05 of the standard to allow tools written for 1.05 data
 to continue working without changes.
 
+## Running
+
+1. Clone the repository, set up a `virtualenv` and install dependencies:
+
+  ```
+  git clone git@github.com:markbrough/IATI-Reversion.git
+  cd IATI-Reversion
+  virtualenv ./pyenv
+  source ./pyenv/bin/activate
+  pip install -r requirements.txt
+  ```
+
+2. Run the conversion tool, where `infile.xml` is the 2.01-formatted file you 
+would like to convert to 1.05, and `outfile.xml` is the 1.05 output file.
+  ```
+  ./convert.py somefile.xml > outfile.xml
+  ```
+
 ## Limitations
 
 Only the following changes have so far been implemented.
